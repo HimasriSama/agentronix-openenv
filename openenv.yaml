@@ -1,0 +1,21 @@
+name: agentronix-email-triage
+
+description: RL environment where an AI agent learns to classify emails into categories like work, personal, spam, urgent, and promotion.
+
+actions:
+  - work
+  - personal
+  - promotion
+  - urgent
+  - spam
+
+observation: email_text
+
+reward:
+  correct_classification: 1
+  incorrect_classification: -1
+
+tasks:
+  - easy
+  - medium
+  - hard
