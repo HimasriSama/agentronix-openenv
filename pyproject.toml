@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "inference:app"
+server = "inference:main"
 
 [build-system]
 requires = ["setuptools", "wheel"]
