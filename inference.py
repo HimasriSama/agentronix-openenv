@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from env import EmailTriageEnv
 
 app = FastAPI()
-
 env = EmailTriageEnv()
 
 @app.post("/reset")
@@ -19,3 +18,7 @@ def step(action: str):
         "done": done,
         "info": info
     }
+
+def main():
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
