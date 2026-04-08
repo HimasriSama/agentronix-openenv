@@ -1,9 +1,17 @@
 [project]
 name = "agentronix-email-triage"
 version = "0.1.0"
-description = "Email triage RL environment for Agentronix hackathon"
+description = "Email triage RL environment"
 authors = [{name="Himasri"}]
-dependencies = []
+
+dependencies = [
+    "openenv-core>=0.2.0",
+    "fastapi",
+    "uvicorn"
+]
+
+[project.scripts]
+server = "inference:app"
 
 [build-system]
 requires = ["setuptools", "wheel"]
