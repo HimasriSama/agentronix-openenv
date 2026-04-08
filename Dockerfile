@@ -1,9 +1,8 @@
 FROM python:3.10
 
 WORKDIR /app
-
 COPY . /app
 
-RUN pip install --no-cache-dir pyyaml
+RUN pip install fastapi uvicorn pyyaml
 
-CMD bash -c "python baseline.py; tail -f /dev/null"
+CMD ["uvicorn", "inference:app", "--host", "0.0.0.0", "--port", "7860"]
